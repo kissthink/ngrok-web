@@ -46,7 +46,7 @@ describe('api routes', function() {
       .expect(200, done);
   });
 
-  it('PUT /api/defaults - returns json and http/200', function(done) {
+  it('PUT /api/tunnels - returns json and http/200', function(done) {
     request(app)
       .put('/api/tunnels')
       .set('Accept', 'application/json')
@@ -54,11 +54,46 @@ describe('api routes', function() {
       .expect(200, done);
   });
 
-  it('POST /api/defaults - returns json and http/200', function(done) {
+  it('POST /api/tunnels - returns json and http/200', function(done) {
     request(app)
       .post('/api/tunnels')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, done);
   });
+
+
+  it('GET /api/tunnel/:tunnelname - returns json and http/200', function(done) {
+    request(app)
+      .get('/api/tunnel/foobar')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+
+  it('PUT /api/tunnel/:tunnelname - returns json and http/200', function(done) {
+    request(app)
+      .put('/api/tunnel/foobar')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+
+  it('POST /api/tunnel/:tunnelname - returns json and http/200', function(done) {
+    request(app)
+      .post('/api/tunnel/foobar')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+
+  it('DELETE /api/tunnel/:tunnelname - returns json and http/200', function(done) {
+    request(app)
+      .delete('/api/tunnel/foobar')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+
+
 });
