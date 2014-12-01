@@ -58,12 +58,12 @@ module.exports = function(grunt) {
 
   grunt.initConfig(config);
 
-  grunt.registerTask('default', function() {
-    console.log('Nothing here yet');
-  });
+  grunt.registerTask('default',['build','test']);
 
-  grunt.registerTask('build',['mkdir']);
-  grunt.registerTask('test',['build','eslint','mochaTest:server']);
+  grunt.registerTask('build',['mkdir','copy']);
+  grunt.registerTask('test',['eslint','mochaTest:server']);
+
+  grunt.registerTask('default',['build','test']);
 
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
