@@ -1,7 +1,9 @@
-var should = require('chai').should();
+/* globals it,describe */
+
+'use strict';
 var request = require('supertest');
 
-var app = require("../../src/server/server");
+var app = require('../../src/server/server');
 
 
 describe('api routes', function() {
@@ -27,7 +29,7 @@ describe('api routes', function() {
       .expect('Content-Type', /json/)
       .expect(200, done);
   });
-  
+
   it('PUT /api/defaults - returns json and http/200', function(done) {
     request(app)
       .put('/api/defaults')
@@ -36,7 +38,6 @@ describe('api routes', function() {
       .expect(200, done);
   });
 
-
   it('GET /api/tunnels - returns json and http/200', function(done) {
     request(app)
       .get('/api/tunnels')
@@ -44,7 +45,7 @@ describe('api routes', function() {
       .expect('Content-Type', /json/)
       .expect(200, done);
   });
-  
+
   it('PUT /api/defaults - returns json and http/200', function(done) {
     request(app)
       .put('/api/tunnels')
@@ -52,7 +53,7 @@ describe('api routes', function() {
       .expect('Content-Type', /json/)
       .expect(200, done);
   });
-  
+
   it('POST /api/defaults - returns json and http/200', function(done) {
     request(app)
       .post('/api/tunnels')
