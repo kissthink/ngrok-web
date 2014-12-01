@@ -11,6 +11,16 @@ module.exports = function(grunt) {
       client: {
         directory: "src/client/"
       }
+    },
+    mochaTest: {
+      server: {
+        options: {
+          reporter: 'spec',
+          quiet: false,
+          clearRequireCache: true
+        },
+        src:  ['test/server/*-test.js']
+      }
     }
   };
 

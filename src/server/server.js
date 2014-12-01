@@ -9,6 +9,6 @@ app.use( bodyParser.urlencoded({ extended: true }) );
 app.use( bodyParser.json() );
 app.use( '/api', apiRouter );
 app.use( express.static(path.join(__dirname, '../client/')));
-app.listen(port);
 
-console.log('Listening on ' + port);
+
+module.exports = app
