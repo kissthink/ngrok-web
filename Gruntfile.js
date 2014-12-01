@@ -30,6 +30,8 @@ module.exports = function(grunt) {
     console.log('Nothing here yet');
   });
 
+  grunt.registerTask('test',['mochaTest:server']);
+
   require('load-grunt-tasks')(grunt);
 
 };
