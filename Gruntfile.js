@@ -6,10 +6,10 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     defaults: {
       server: {
-        directory: "src/server/"                
+        directory: 'src/server/'
       },
       client: {
-        directory: "src/client/"
+        directory: 'src/client/'
       }
     },
     mochaTest: {
@@ -19,8 +19,20 @@ module.exports = function(grunt) {
           quiet: false,
           clearRequireCache: true
         },
-        src:  ['test/server/*-test.js']
+        src: ['test/server/*-test.js']
       }
+    },
+    eslint: {
+      options: {
+        config: 'config/eslint.json'
+      },
+      target: [
+        'Gruntfile.js',
+        'src/server/**.js',
+        'test/server/*.js',
+        'src/client/**.js',
+        'test/client/*.js'
+      ]
     }
   };
 
@@ -30,7 +42,7 @@ module.exports = function(grunt) {
     console.log('Nothing here yet');
   });
 
-  grunt.registerTask('test',['mochaTest:server']);
+  grunt.registerTask('test',['eslint','mochaTest:server']);
 
   require('load-grunt-tasks')(grunt);
 

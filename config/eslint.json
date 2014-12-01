@@ -1,0 +1,45 @@
+{
+    "env": {
+        "node": 1
+    },
+    "globals": {
+    },
+    "rules": {
+        "strict": 1,
+        "no-comma-dangle": 1,
+        "no-empty": 1,
+        "no-extra-semi": 1,
+        "no-inner-declarations": 1,
+        "no-irregular-whitespace": 1,
+        "block-scoped-var": 1,
+        // "curly": ??
+        "eqeqeq": 1,
+        "no-alert": 1,
+        "no-eval": 1,
+        "no-lone-blocks": 1,
+        "no-loop-func": 1,
+        "no-multi-spaces": 1,
+        "no-redeclare": 1,
+        "no-return-assign": 1,
+        "vars-on-top": 1,
+        "consistent-return": 1,
+        "no-unreachable": 1,
+        "no-use-before-define": 1,
+        "valid-jsdoc": 1,
+        "no-console": 0,
+        "camelcase": 0,
+        "no-unused-vars": 1,
+        "no-underscore-dangle": 0,
+        "new-cap": 0,
+        "one-var": 0,
+        "space-infix-ops": 1,
+        "quotes": [1, "single", "avoid-escape"],
+        "eol-last": 1,
+        "no-mixed-spaces-and-tabs": 1,
+        "no-multiple-empty-lines": 1,
+        "no-space-before-semi": 1,
+        "no-trailing-spaces":1,
+        "comma-spacing": 0,
+        "brace-style": [2, "stroustrup", { "allowSingleLine": false }]
+    }
+}
