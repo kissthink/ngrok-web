@@ -4,15 +4,20 @@
 module.exports = function(grunt) {
   var config = {
     pkg: grunt.file.readJSON('package.json'),
-    defaults: {
+
+    defaults: { /* defaults: start */
       server: {
         directory: 'src/server/'
       },
       client: {
         directory: 'src/client/'
+      },
+      build: {
+        directory: 'dist/'
       }
-    },
-    mochaTest: {
+    }, /* defaults: end */
+
+    mochaTest: { /* mochaTest: start */
       server: {
         options: {
           reporter: 'spec',
@@ -21,8 +26,9 @@ module.exports = function(grunt) {
         },
         src: ['test/server/*-test.js']
       }
-    },
-    eslint: {
+    }, /* mochaTest: end*/
+
+    eslint: { /* eslint: start */
       options: {
         config: 'config/eslint.json'
       },
@@ -33,6 +39,12 @@ module.exports = function(grunt) {
         'src/client/**.js',
         'test/client/*.js'
       ]
+    }, /* eslint: end */
+
+    mkdir: {
+      options: {
+        create: ['<%= defaults.build.directory %>']
+      }
     }
   };
 
@@ -42,7 +54,8 @@ module.exports = function(grunt) {
     console.log('Nothing here yet');
   });
 
-  grunt.registerTask('test',['eslint','mochaTest:server']);
+  grunt.registerTask('build',['mkdir']);
+  grunt.registerTask('test',['build','eslint','mochaTest:server']);
 
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
