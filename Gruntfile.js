@@ -25,6 +25,14 @@ module.exports = function(grunt) {
           clearRequireCache: true
         },
         src: ['test/server/*-test.js']
+      },
+      client: {
+        options: {
+          reporter: 'spec',
+          quiet: false,
+          clearRequireCache: true
+        },
+        src: ['test/client/*-test.js']
       }
     }, /* mochaTest: end*/
 
@@ -61,7 +69,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default',['build','test']);
 
   grunt.registerTask('build',['mkdir','copy']);
-  grunt.registerTask('test',['eslint','mochaTest:server']);
+  grunt.registerTask('test',['eslint','mochaTest']);
 
   grunt.registerTask('default',['build','test']);
 
