@@ -1,0 +1,20 @@
+# IntelliJ
+.idea
+*.iml
+
+# MAC/PC hidden files
+.DS_Store
+Thumbs.db
+*~
+._*
+\#*
+
+# Build dirs
+target
+dist
+node_modules
+.grunt
+
+# NPM
+npm-debug.log
+_SpecRunner.html
