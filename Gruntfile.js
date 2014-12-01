@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     copy: {
       assets: {
         files: [
-          {expand: true, cwd: "<%= defaults.client.directory %>assets/", src: "**", dest: "<%= defaults.build.directory %>" }
+          {expand: true, cwd: '<%= defaults.client.directory %>assets/', src: '**', dest: '<%= defaults.build.directory %>' }
         ]
       }
     }
