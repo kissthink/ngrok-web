@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rasjani/ngrok-web.svg?branch=master)](https://travis-ci.org/rasjani/ngrok-web)
+
 NGROK-WEB
 =========
 
