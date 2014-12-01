@@ -4,7 +4,8 @@
   "description": "Configuration tool for ngrok",
   "private": true,
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "start": "node src/server/server"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,13 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13"
+    "grunt-cli": "^0.1.13",
+    "grunt-eslint": "^2.1.0",
+    "load-grunt-tasks": "^1.0.0",
+    "time-grunt": "^1.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "express": "^4.10.4"
   }
 }
