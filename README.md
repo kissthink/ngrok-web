@@ -12,7 +12,7 @@ Backend API
 
 
 | Route | HTTP | Description |
-| ----- | ---- | ----------- |
+|-------|------|-------------|
 | /api/ | GET  | TBD         |
 | /api/defaults | GET | returns all top level configs |
 | /api/defaults | PUT | updates all top level configs |
