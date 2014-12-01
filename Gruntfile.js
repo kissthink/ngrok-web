@@ -45,5 +45,6 @@ module.exports = function(grunt) {
   grunt.registerTask('test',['eslint','mochaTest:server']);
 
   require('load-grunt-tasks')(grunt);
+  require('time-grunt')(grunt);
 
 };
