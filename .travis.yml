@@ -9,4 +9,7 @@ script:
   - grunt
 git:
   submodules: false
-
+branches:
+  only:
+    - master
+    - staging
