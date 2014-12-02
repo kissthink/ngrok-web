@@ -10,10 +10,11 @@ Thumbs.db
 \#*
 
 # Build dirs
-target
-dist
-node_modules
-.grunt
+target/
+dist/
+node_modules/
+bower_components/
+.grunt/
 
 # NPM
 npm-debug.log

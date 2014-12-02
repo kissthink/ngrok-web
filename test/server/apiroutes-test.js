@@ -5,7 +5,6 @@ var request = require('supertest');
 
 var app = require('../../src/server/server');
 
-
 describe('api routes', function() {
 
   it('GET /api/non-existent - returns http/404', function(done) {
